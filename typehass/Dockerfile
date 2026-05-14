@@ -1,5 +1,3 @@
-FROM denoland/deno:debian AS deno
-
 FROM ghcr.io/home-assistant/base:latest
 
 ARG BUILD_VERSION=0.1.0
@@ -13,7 +11,8 @@ ENV LOG_LEVEL=info
 
 WORKDIR /app
 
-COPY --from=deno /usr/bin/deno /usr/local/bin/deno
+RUN apk add --no-cache deno
+
 COPY import_map.json /app/import_map.json
 COPY src /app/src
 COPY run.sh /run.sh

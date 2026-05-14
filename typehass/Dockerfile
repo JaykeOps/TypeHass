@@ -1,4 +1,6 @@
-FROM denoland/deno:alpine
+FROM denoland/deno:alpine AS deno
+
+FROM ghcr.io/home-assistant/base:latest
 
 ARG BUILD_VERSION=0.1.0
 
@@ -11,16 +13,11 @@ ENV LOG_LEVEL=info
 
 WORKDIR /app
 
+COPY --from=deno /usr/local/bin/deno /usr/local/bin/deno
 COPY import_map.json /app/import_map.json
 COPY src /app/src
+COPY run.sh /run.sh
 
-CMD [
-  "run",
-  "--unstable-cron",
-  "--import-map=/app/import_map.json",
-  "--allow-net=supervisor",
-  "--allow-env=SUPERVISOR_TOKEN,LOG_LEVEL",
-  "--allow-read=/app,/config/typehass",
-  "--allow-write=/config/typehass/generated",
-  "/app/src/main.ts"
-]
+RUN chmod a+x /run.sh
+
+CMD [ "/run.sh" ]

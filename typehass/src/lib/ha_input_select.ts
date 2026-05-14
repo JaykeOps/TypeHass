@@ -2,10 +2,10 @@ import type { EntityId, InputSelectEntityId } from "./ha_types.ts";
 import type { HomeAssistantWs } from "./ha_ws.ts";
 
 export function createInputSelectPublisher<
-  TEntityId extends EntityId = EntityId,
   Option extends string = string,
+  TEntityId extends EntityId = EntityId,
 >(
-  ha: HomeAssistantWs<TEntityId>,
+  ha: Pick<HomeAssistantWs, "callService">,
   entityId: InputSelectEntityId<TEntityId>,
 ) {
   let lastPublishedOption: Option | undefined;

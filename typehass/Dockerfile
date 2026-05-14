@@ -1,4 +1,4 @@
-FROM denoland/deno:alpine AS deno
+FROM denoland/deno:debian AS deno
 
 FROM ghcr.io/home-assistant/base:latest
 
@@ -13,7 +13,7 @@ ENV LOG_LEVEL=info
 
 WORKDIR /app
 
-COPY --from=deno /bin/deno /usr/local/bin/deno
+COPY --from=deno /usr/bin/deno /usr/local/bin/deno
 COPY import_map.json /app/import_map.json
 COPY src /app/src
 COPY run.sh /run.sh

@@ -13,7 +13,7 @@ ENV LOG_LEVEL=info
 
 WORKDIR /app
 
-COPY --from=deno /usr/local/bin/deno /usr/local/bin/deno
+COPY --from=deno /bin/deno /usr/local/bin/deno
 COPY import_map.json /app/import_map.json
 COPY src /app/src
 COPY run.sh /run.sh

@@ -10,7 +10,6 @@ arch:
 startup: application
 boot: auto
 init: false
-watchdog: false
 
 homeassistant_api: true
 

@@ -12,6 +12,14 @@ export { createInputSelectPublisher } from "./ha_input_select.ts";
 export { createNotifyEntityPublisher } from "./ha_notify_entity.ts";
 
 export type {
+  GeneratedEntityIdInDomain,
+  GeneratedNotifyEntityId,
+  GeneratedSensorEntityId,
+  GeneratedServiceIdInDomain,
+  GeneratedTypeHassContext,
+} from "./generated_context.ts";
+
+export type {
   EntityId,
   EntityIdContaining,
   EntityIdInDomain,

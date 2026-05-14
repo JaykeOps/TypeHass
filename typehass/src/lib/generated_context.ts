@@ -1,4 +1,4 @@
-import type { EntityId, ServiceId } from "typehass/generated";
+import type { EntityId, ServiceId } from "./generated/mod.ts";
 import type {
   EntityIdInDomain,
   NotifyEntityId,

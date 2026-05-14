@@ -1,0 +1,8 @@
+{
+  "imports": {
+    "typehass": "file:///app/src/lib/mod.ts",
+    "typehass/": "file:///app/src/lib/",
+    "typehass/generated": "file:///config/typehass/generated/index.ts",
+    "typehass/generated/": "file:///config/typehass/generated/"
+  }
+}

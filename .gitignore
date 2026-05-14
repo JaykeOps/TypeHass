@@ -1,0 +1,59 @@
+# Deno
+.deno/
+deno-dir/
+deno.lock
+
+# TypeHass generated/runtime files
+generated/
+**/generated/
+typehass/generated/
+config/typehass/generated/
+
+# Local Home Assistant config mounts / test data
+homeassistant/
+config/
+.storage/
+*.db
+*.db-shm
+*.db-wal
+home-assistant.log*
+OZW_Log.txt
+
+# Secrets / environment
+.env
+.env.*
+!.env.example
+secrets.yaml
+*.secret
+*.token
+
+# Docker / local build output
+*.tar
+*.img
+*.log
+
+# Nix
+result
+result-*
+.direnv/
+
+# Editors / OS
+.vscode/*
+!.vscode/settings.json
+!.vscode/extensions.json
+.idea/
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+
+# Coverage / tests
+coverage/
+lcov.info
+
+# Temporary files
+tmp/
+temp/
+.cache/
+
+manual_test/

@@ -1,0 +1,23 @@
+name: "TypeHass"
+version: "0.1.0"
+slug: "typehass"
+description: "A zero-dependency Deno daemon for writing Home Assistant automations in TypeScript."
+
+arch:
+  - amd64
+  - aarch64
+
+startup: application
+boot: auto
+init: false
+watchdog: false
+
+homeassistant_api: true
+
+map:
+  - type: homeassistant_config
+    read_only: false
+    path: /config
+
+schema: {}
+options: {}

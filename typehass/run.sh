@@ -12,5 +12,5 @@ exec deno run \
   --allow-net=supervisor \
   --allow-env=SUPERVISOR_TOKEN,LOG_LEVEL \
   --allow-read=/app,/config/typehass \
-  --allow-write=/config/typehass/generated \
+  --allow-write=/config/typehass/sdk,/config/typehass/deno.json \
   /app/src/main.ts

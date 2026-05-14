@@ -8,6 +8,7 @@ export type TypeHassContext<TEntityId extends EntityId = EntityId> = {
   logger: Logger;
 };
 
+export { createInputSelectPublisher } from "./ha_input_select.ts";
 export { createNotifyEntityPublisher } from "./ha_notify_entity.ts";
 
 export type {

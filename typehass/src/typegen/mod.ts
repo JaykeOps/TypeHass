@@ -1,7 +1,7 @@
 const HA_REST_URL = "http://supervisor/core/api";
 const HA_WS_URL = "ws://supervisor/core/websocket";
 
-const OUTPUT_FILE = "/config/typehass/generated/index.ts";
+const OUTPUT_FILE = "/config/typehass/sdk/generated/mod.ts";
 
 const DEBOUNCE_MS = 2_000;
 const RECONNECT_MS = 5_000;

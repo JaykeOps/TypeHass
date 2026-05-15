@@ -17,7 +17,7 @@ export type {
   GeneratedSensorEntityId,
   GeneratedServiceIdInDomain,
   GeneratedTypeHassContext,
-} from "./generated_context.ts";
+} from "./generated/context.ts";
 
 export type {
   EntityId,
